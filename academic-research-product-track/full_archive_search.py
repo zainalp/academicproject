@@ -8,13 +8,13 @@ client = Twarc2(bearer_token="XXXXX")
 
 def main():
     # Specify the start time in UTC for the time period you want Tweets from
-    start_time = datetime.datetime(2021, 1, 1, 0, 0, 0, 0, datetime.timezone.utc)
+    start_time = datetime.datetime(2009, 7, 16, 0, 0, 0, 0, datetime.timezone.utc)
 
     # Specify the end time in UTC for the time period you want Tweets from
-    end_time = datetime.datetime(2021, 5, 30, 0, 0, 0, 0, datetime.timezone.utc)
+    end_time = datetime.datetime(2023, 1, 31, 0, 0, 0, 0, datetime.timezone.utc)
 
     # This is where we specify our query as discussed in module 5
-    query = "from:twitterdev -is:retweet"
+    query = "bom marriott"
 
     # The search_all method call the full-archive search endpoint to get Tweets based on the query, start and end times
     search_results = client.search_all(query=query, start_time=start_time, end_time=end_time, max_results=100)
